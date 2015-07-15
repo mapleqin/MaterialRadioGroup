@@ -1,11 +1,42 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:soulwolf="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:background="@color/mc_default_pager">
 
-    <TextView android:text="@string/hello_world" android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/mi_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/mc_title_bar"/>
 
-</RelativeLayout>
+    <net.soulwolf.widget.materialradio.MaterialRadioGroup
+        android:layout_width="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <net.soulwolf.widget.materialradio.MaterialRadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            soulwolf:mcTextSize="8sp"
+            soulwolf:mcText="男孩"
+            soulwolf:mcPadding="3dp"
+            soulwolf:mcTextColor="@drawable/radio_button_text_selector"
+            soulwolf:mcButton="@drawable/radio_button_boy_selector"/>
+
+        <net.soulwolf.widget.materialradio.MaterialRadioButton
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_height="wrap_content"
+            soulwolf:mcTextSize="8sp"
+            soulwolf:mcPadding="3dp"
+            soulwolf:mcText="女孩"
+            soulwolf:mcTextColor="@drawable/radio_button_text_selector"
+            soulwolf:mcButton="@drawable/radio_button_girl_selector"/>
+
+    </net.soulwolf.widget.materialradio.MaterialRadioGroup>
+</LinearLayout>

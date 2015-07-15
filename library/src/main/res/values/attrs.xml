@@ -6,7 +6,7 @@
         <attr name="mcButton"    format="color|reference"/>
         <attr name="mcText"      format="string|reference"/>
         <attr name="mcTextSize"  format="dimension|reference"/>
-        <attr name="mcTextColor" format="color|reference"/>
+        <attr name="mcTextColor" format="reference"/>
         <attr name="mcChecked"   format="boolean"/>
     </declare-styleable>
 </resources>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="mc_title_bar">#FF16C2DD</color>
+    <color name="mc_state_pressed">#FF1088DD</color>
+    <color name="mc_default_pager">#FFF0F0F0</color>
+    <color name="mc_black_t">#55000000</color>
+    <color name="mc_black_t_pic">#22000000</color>
+    <color name="mc_gallery_bg">#FF16C2DD</color>
+</resources>
