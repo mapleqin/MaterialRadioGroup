@@ -8,7 +8,7 @@ For more information please see <a href='http://devsoulwolf.github.io/MaterialRa
 ![Sample2](https://img.alicdn.com/imgextra/i1/1025192026/TB2B7xVdVXXXXcxXpXXXXXXXXXX_!!1025192026.jpg_310x310.jpg)
 
 
-## PictureChooseLib with Java code
+## PictureChooseLib with android layout code
 ```java
 <net.soulwolf.widget.materialradio.MaterialRadioGroup
     android:layout_width="match_parent"
