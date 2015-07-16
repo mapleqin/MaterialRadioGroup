@@ -25,6 +25,8 @@ import android.view.accessibility.AccessibilityEvent;
 import android.view.accessibility.AccessibilityNodeInfo;
 import android.widget.LinearLayout;
 
+import net.soulwolf.widget.materialradio.listener.OnButtonCheckedChangeListener;
+import net.soulwolf.widget.materialradio.listener.OnCheckedChangeListener;
 import net.soulwolf.widget.materialradio.utils.Utils;
 
 /**
@@ -37,7 +39,7 @@ public class MaterialRadioGroup extends LinearLayout {
     // holds the checked id; the selection is empty by default
     private int mCheckedId = -1;
     // tracks children radio buttons checked state
-    private net.soulwolf.widget.materialradio.listener.OnCheckedChangeListener mChildOnCheckedChangeListener;
+    private OnButtonCheckedChangeListener mChildOnButtonCheckedChangeListener;
     // when true, mOnCheckedChangeListener discards events
     private boolean mProtectFromCheckedChange = false;
 
@@ -77,7 +79,7 @@ public class MaterialRadioGroup extends LinearLayout {
     }
 
     private void init() {
-        mChildOnCheckedChangeListener = new CheckedStateTracker();
+        mChildOnButtonCheckedChangeListener = new ButtonCheckedStateTracker();
         mPassThroughListener = new PassThroughHierarchyChangeListener();
         super.setOnHierarchyChangeListener(mPassThroughListener);
     }
@@ -285,23 +287,8 @@ public class MaterialRadioGroup extends LinearLayout {
         }
     }
 
-    /**
-     * <p>Interface definition for a callback to be invoked when the checked
-     * radio button changed in this group.</p>
-     */
-    public interface OnCheckedChangeListener {
-        /**
-         * <p>Called when the checked radio button has changed. When the
-         * selection is cleared, checkedId is -1.</p>
-         *
-         * @param group the group in which the checked radio button has changed
-         * @param checkedId the unique identifier of the newly checked radio button
-         */
-        public void onCheckedChanged(MaterialRadioGroup group, int checkedId);
-    }
-
-    private class CheckedStateTracker implements
-            net.soulwolf.widget.materialradio.listener.OnCheckedChangeListener {
+    private class ButtonCheckedStateTracker implements
+            OnButtonCheckedChangeListener {
 
         public void onCheckedChanged(MaterialCompoundButton buttonView, boolean isChecked) {
             // prevents from infinite recursion
@@ -339,7 +326,7 @@ public class MaterialRadioGroup extends LinearLayout {
                     child.setId(id);
                 }
                 ((MaterialCompoundButton) child).setOnCheckedChangeWidgetListener(
-                        mChildOnCheckedChangeListener);
+                        mChildOnButtonCheckedChangeListener);
             }
 
             if (mOnHierarchyChangeListener != null) {

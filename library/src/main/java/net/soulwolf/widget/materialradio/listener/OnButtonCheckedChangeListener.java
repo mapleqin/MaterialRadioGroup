@@ -18,23 +18,13 @@
  */
 package net.soulwolf.widget.materialradio.listener;
 
-import net.soulwolf.widget.materialradio.MaterialRadioGroup;
+import net.soulwolf.widget.materialradio.MaterialCompoundButton;
 
 /**
- * <p>Interface definition for a callback to be invoked when the checked
- * radio button changed in this group.</p>
- *
- * author: Soulwolf Created on 2015/7/16 20:56.
+ * author: Soulwolf Created on 2015/7/15 21:43.
  * email : Ching.Soulwolf@gmail.com
  */
-public interface OnCheckedChangeListener {
+public interface OnButtonCheckedChangeListener {
 
-    /**
-     * <p>Called when the checked radio button has changed. When the
-     * selection is cleared, checkedId is -1.</p>
-     *
-     * @param group the group in which the checked radio button has changed
-     * @param checkedId the unique identifier of the newly checked radio button
-     */
-    public void onCheckedChanged(MaterialRadioGroup group, int checkedId);
+    public void onCheckedChanged(MaterialCompoundButton compoundView, boolean isChecked);
 }

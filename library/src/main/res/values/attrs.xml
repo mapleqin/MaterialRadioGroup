@@ -8,5 +8,6 @@
         <attr name="mcTextSize"  format="dimension|reference"/>
         <attr name="mcTextColor" format="reference"/>
         <attr name="mcChecked"   format="boolean"/>
+        <attr name="mcAnimator"   format="boolean"/>
     </declare-styleable>
 </resources>

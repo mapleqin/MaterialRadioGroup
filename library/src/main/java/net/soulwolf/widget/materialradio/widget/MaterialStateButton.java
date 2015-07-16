@@ -19,19 +19,15 @@
 package net.soulwolf.widget.materialradio.widget;
 
 import android.content.Context;
-import android.content.res.ColorStateList;
-import android.graphics.drawable.Drawable;
 import android.os.Parcel;
 import android.os.Parcelable;
-import android.support.annotation.ColorInt;
-import android.support.annotation.StringRes;
 import android.util.AttributeSet;
 import android.widget.Checkable;
 import android.widget.ImageView;
 
 import com.toaker.common.tlog.TLog;
 
-import net.soulwolf.widget.materialradio.listener.OnCheckedChangeListener;
+import net.soulwolf.widget.materialradio.listener.OnStateButtonCheckedListener;
 
 /**
  * author: Soulwolf Created on 2015/7/15 23:45.
@@ -49,7 +45,7 @@ public class MaterialStateButton extends ImageView implements Checkable {
 
     private boolean mChecked;
 
-    private OnCheckedChangeListener mOnCheckedChangeListener;
+    private OnStateButtonCheckedListener mOnStateButtonCheckedListener;
 
     public MaterialStateButton(Context context) {
         super(context);
@@ -72,8 +68,8 @@ public class MaterialStateButton extends ImageView implements Checkable {
             mChecked = checked;
             refreshDrawableState();
 
-            if(mOnCheckedChangeListener != null){
-                mOnCheckedChangeListener.onCheckedChanged(null,mChecked);
+            if(mOnStateButtonCheckedListener != null){
+                mOnStateButtonCheckedListener.onCheckedChanged(mChecked);
             }
         }
     }
@@ -86,6 +82,9 @@ public class MaterialStateButton extends ImageView implements Checkable {
     @Override
     public void toggle() {
         setChecked(!mChecked);
+        if(mOnStateButtonCheckedListener != null){
+            mOnStateButtonCheckedListener.onCheckedToggle();
+        }
     }
 
     @Override
@@ -93,7 +92,9 @@ public class MaterialStateButton extends ImageView implements Checkable {
         if(DEBUG){
             TLog.d(LOG_TAG,"performClick");
         }
-        toggle();
+        if(!isChecked()){
+            toggle();
+        }
         return super.performClick();
     }
 
@@ -106,8 +107,8 @@ public class MaterialStateButton extends ImageView implements Checkable {
         return drawableState;
     }
 
-    public void setOnCheckedChangeListener(OnCheckedChangeListener mOnCheckedChangeListener) {
-        this.mOnCheckedChangeListener = mOnCheckedChangeListener;
+    public void setOnStateButtonCheckedListener(OnStateButtonCheckedListener listener) {
+        this.mOnStateButtonCheckedListener = listener;
     }
 
     @Override

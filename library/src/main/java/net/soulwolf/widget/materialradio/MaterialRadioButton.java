@@ -20,6 +20,7 @@ import android.content.Context;
 import android.util.AttributeSet;
 import android.view.accessibility.AccessibilityEvent;
 import android.view.accessibility.AccessibilityNodeInfo;
+import android.widget.CompoundButton;
 import android.widget.TextView;
 
 /**

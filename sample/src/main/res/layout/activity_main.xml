@@ -13,28 +13,31 @@
         android:background="@color/mc_title_bar"/>
 
     <net.soulwolf.widget.materialradio.MaterialRadioGroup
-        android:layout_width="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_marginTop="50dp"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
         <net.soulwolf.widget.materialradio.MaterialRadioButton
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            soulwolf:mcTextSize="8sp"
-            soulwolf:mcText="男孩"
-            soulwolf:mcPadding="3dp"
+            android:layout_height="match_parent"
+            soulwolf:mcTextSize="6sp"
+            soulwolf:mcText="男生"
+            soulwolf:mcPadding="5dp"
+            soulwolf:mcChecked="true"
+            soulwolf:mcAnimator="true"
             soulwolf:mcTextColor="@drawable/radio_button_text_selector"
             soulwolf:mcButton="@drawable/radio_button_boy_selector"/>
 
         <net.soulwolf.widget.materialradio.MaterialRadioButton
             android:layout_width="wrap_content"
             android:layout_marginLeft="30dp"
-            android:layout_height="wrap_content"
-            soulwolf:mcTextSize="8sp"
-            soulwolf:mcPadding="3dp"
-            soulwolf:mcText="女孩"
+            android:layout_height="match_parent"
+            soulwolf:mcAnimator="true"
+            soulwolf:mcTextSize="6sp"
+            soulwolf:mcPadding="5dp"
+            soulwolf:mcText="女生"
             soulwolf:mcTextColor="@drawable/radio_button_text_selector"
             soulwolf:mcButton="@drawable/radio_button_girl_selector"/>
 
