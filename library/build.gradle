@@ -23,3 +23,5 @@ dependencies {
     compile 'com.android.support:appcompat-v7:22.2.0'
     compile 'com.toaker.common:tlog:1.0.0'
 }
+
+apply from: '../gradle-mvn-push.gradle'

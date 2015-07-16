@@ -24,8 +24,6 @@ import android.view.ViewGroup;
 import android.view.accessibility.AccessibilityEvent;
 import android.view.accessibility.AccessibilityNodeInfo;
 import android.widget.LinearLayout;
-import android.widget.RadioButton;
-import android.widget.RadioGroup;
 
 import net.soulwolf.widget.materialradio.utils.Utils;
 
@@ -174,7 +172,6 @@ public class MaterialRadioGroup extends LinearLayout {
      * @see #check(int)
      * @see #clearCheck()
      *
-     * @attr ref android.R.styleable#RadioGroup_checkedButton
      */
     public int getCheckedRadioButtonId() {
         return mCheckedId;
