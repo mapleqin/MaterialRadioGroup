@@ -56,7 +56,7 @@ For more information please see <a href='http://devsoulwolf.github.io/MaterialRa
        }
 	}
 	
-	compile 'net.soulwolf.image:materialRadio:1.0.1'
+	compile 'net.soulwolf.widget:materialRadio:1.0.1'
 
 ## Developed by
  Ching Soulwolf - <a href='javascript:'>Ching.Soulwolf@gmail.com</a>
