@@ -10,7 +10,9 @@ For more information please see <a href='http://devsoulwolf.github.io/MaterialRa
 
 ## PictureChooseLib with android layout code
 ```java
+
 <net.soulwolf.widget.materialradio.MaterialRadioGroup
+    xmlns:soulwolf="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:gravity="center"
     android:layout_marginTop="50dp"
