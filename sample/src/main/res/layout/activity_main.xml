@@ -13,6 +13,7 @@
         android:background="@color/mc_title_bar"/>
 
     <net.soulwolf.widget.materialradio.MaterialRadioGroup
+        android:id="@+id/material_radio_group"
         android:layout_width="match_parent"
         android:gravity="center"
         android:layout_marginTop="50dp"
@@ -20,6 +21,7 @@
         android:orientation="horizontal">
 
         <net.soulwolf.widget.materialradio.MaterialRadioButton
+            android:id="@+id/material_radio_button_boy"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             soulwolf:mcTextSize="6sp"
@@ -31,6 +33,7 @@
             soulwolf:mcButton="@drawable/radio_button_boy_selector"/>
 
         <net.soulwolf.widget.materialradio.MaterialRadioButton
+            android:id="@+id/material_radio_button_girl"
             android:layout_width="wrap_content"
             android:layout_marginLeft="30dp"
             android:layout_height="match_parent"

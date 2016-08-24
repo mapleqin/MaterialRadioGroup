@@ -228,6 +228,52 @@ public class MaterialRadioGroup extends LinearLayout {
         info.setClassName(MaterialRadioGroup.class.getName());
     }
 
+    @Override
+    protected void onRestoreInstanceState(Parcelable state) {
+        SavedState ownState = (SavedState) state;
+        super.onRestoreInstanceState(ownState.getSuperState());
+        check(ownState.checkedId);
+        requestLayout();
+    }
+
+    @Override
+    protected Parcelable onSaveInstanceState() {
+        Parcelable superState = super.onSaveInstanceState();
+        SavedState ownState = new SavedState(superState);
+        ownState.checkedId = mCheckedId;
+        return ownState;
+    }
+
+
+    public static class SavedState extends BaseSavedState {
+        public static final Creator<SavedState> CREATOR = new Creator<SavedState>() {
+            @Override
+            public SavedState createFromParcel(Parcel source) {
+                return new SavedState(source);
+            }
+
+            @Override
+            public SavedState[] newArray(int size) {
+                return new SavedState[size];
+            }
+        };
+        int checkedId;
+
+        private SavedState(Parcel source) {
+            super(source);
+            checkedId = source.readInt();
+        }
+
+        SavedState(Parcelable superState) {
+            super(superState);
+        }
+
+        @Override
+        public void writeToParcel(Parcel dest, int flags) {
+            super.writeToParcel(dest, flags);
+            dest.writeInt(checkedId);
+        }
+    }
     /**
      * <p>This set of layout parameters defaults the width and the height of
      * the children to {@link #WRAP_CONTENT} when they are not specified in the
