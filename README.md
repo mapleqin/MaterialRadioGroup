@@ -1,7 +1,7 @@
 # MaterialRadioGroup
 This is a cool radio button group!
 
-For more information please see <a href='http://devsoulwolf.github.io/MaterialRadioGroup'>the website</a>
+For more information please see <a href='https://amphiaraus.org/MaterialRadioGroup'>the website</a>
 
 ## Screenshots
 ![Sample1](https://img.alicdn.com/imgextra/i2/1025192026/TB2viundVXXXXXbXXXXXXXXXXXX_!!1025192026.jpg_310x310.jpg)
